@@ -95,9 +95,15 @@ const nextBtn = document.querySelector('.swiper-button-next');
 
 prevBtn.style.display = 'none';
 nextBtn.style.display = 'none';
+swiper.params.allowTouchMove = false;
+swiper.params.simulateTouch = false;
+swiper.params.touchRatio = 0;
 
 reviewsBtn.addEventListener('click', () => {
     prevBtn.style.display = 'block';
     nextBtn.style.display = 'block';
+    swiper.params.allowTouchMove = true;
+    swiper.params.simulateTouch = true;
+    swiper.params.touchRatio = 1;
     reviewsBtn.style.display = 'none';
 })
